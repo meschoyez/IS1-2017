@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+        <title>
+            Sign up
+
+            
+        </title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <style>
+            body
+            {   
+                background-color:brown;
+                font-family: Courier New;
+            }
+            a:link{color:yellow;}
+            a:visited{color:darkkhaki}
+            a:hover{color:wheat}
+            a:active{color:sandybrown}
+
+            #form, select, textarea 
+            {
+                color:white;
+                font-weight: bold;
+            }
+
+            input, select, textarea
+            {
+                background-color: brown;
+                font-weight: bold;
+            }
+            
+        </style>       
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+            <br>
+            <br>
+        <form id="form" align = "right" action="/action_page.php">
+            Fill with your information <br>
+            <br>
+            <br>
+            First name: <br>
+            <input id="firstname" type="text" name="firstname" value="">
+            <br>
+            Last name: <br>
+            <input id="lastname" type="text" name="lastname" value="">
+            <br>
+            User: <br>
+            <input id="user" type="text" name="user" value="">
+            <br>
+            Password: <br>
+            <input id="password" type="password" name="password" value="">
+            <br>
+            At least 8 characters
+            <br> 
+            <br>
+            <input id="submit" type="button" value="Submit">
+        </form>   
+          
+        
+        <script>
+            $("#submit").click(function()
+            {
+                if($('#firstname').val() == '' || $('#lastname').val()=='' || $('#user').val()=='' || $('#password').val() == '')
+                {
+                    alert('Fill empty input');
+                    $("#form").trigger("reset");
+                }
+                else
+                {
+                    if($("#password").val().length<8)
+                    {
+                        alert("Password too short");
+                        $("#form").trigger("reset");
+                    }
+                    else
+                    {    
+                        alert("User saved");
+                        window.open("login.html","_self")
+                    }
+                }
+            });
+
+        </script>
+    </body>
+</html>
