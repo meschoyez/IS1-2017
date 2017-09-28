@@ -68,32 +68,30 @@
     <br><br><br><br>
 
     <div id="container"></div>
+    <div id="frfc"></div>
 
     <script>
-      
+
       $("#search").click(function()
       {
         if($('#title').val() == '' && $('#author').val()=='' && $('#publisher').val()=='' && $('#edition').val() == '')
         {
           alert('Fill one input please');
-          createTable();
         }
         else
         {
-          alert("Book found.");
-          createTable();
+          //alert("Book found.");
+          createTable($('#title').val(),$('#author').val(),$('#publisher').val(),$('#edition').val());
         }
       });
 
-      function createTable() 
+      function createTable(title,author,publisher,edition) 
       {
-
           $("#container").append ('<table style="width:100%">'+ 
           '<tr><th>Title</th><th>Author</th><th>Publisher</th><th>Edition</th></tr>' +
-          '<tr><td>Jill</td><td>Smith</td> <td>50</td><td>lal</td></tr>' +
-          '<tr><td>Eve</td><td>Jackson</td> <td>94</td><td>lel</td></tr>' +
+          '<tr><td>'+ title + '</td><td>'+ author +'</td> <td>'+ publisher +'</td><td>'+ edition +'</td></tr>' +
+          '<tr><td>lele</td><td>lele</td> <td>1313</td><td>lel</td></tr>' +
           '</table>')  
-  
       }
 
     </script>
