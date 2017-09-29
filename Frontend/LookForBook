@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<HTML>
+
+  <head>
+
+    <style>
+      table, th, td 
+      {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td 
+      {
+        padding: 10px;
+      }
+
+      #container
+      {
+        background-color: white;
+        font-family: Courier New;
+        font-weight: bolder;
+      }
+
+      body 
+      { 
+        background-color:brown;
+        font-family: Courier New;
+      }
+      #mainHeader 
+      {
+        color:yellow;
+      }
+      #form, select, textarea 
+      {
+        color:white;
+        font-weight: bold;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+
+  <center><u><h1 id="mainHeader">LIBRARY DATABASE</u></h1></center>
+
+  <form id="form" align = "left" action="/action_page.php">
+    Search for a book: <br>
+    <br>
+    <br>
+    Title: <br>
+    <input id="title" type="text" name="title" value="">
+    <br>
+    Author: <br>
+    <input id="author" type="text" name="author" value="">
+    <br>
+    Publisher: <br>
+    <input id="publisher" type="text" name="publisher" value="">
+    <br>
+    Edition: <br>
+    <input id="edition" type="text" name="edition" value="">
+    <br> 
+    <br>
+    <input id="search" type="button" value="SEARCH">
+  </form> 
+
+    <br><br><br><br>
+
+    <div id="container"></div>
+    <div id="frfc"></div>
+
+    <script>
+
+      $("#search").click(function()
+      {
+        if($('#title').val() == '' && $('#author').val()=='' && $('#publisher').val()=='' && $('#edition').val() == '')
+        {
+          alert('Fill one input please');
+        }
+        else
+        {
+          //alert("Book found.");
+          createTable($('#title').val(),$('#author').val(),$('#publisher').val(),$('#edition').val());
+        }
+      });
+
+      function createTable(title,author,publisher,edition) 
+      {
+          $("#container").append ('<table style="width:100%">'+ 
+          '<tr><th>Title</th><th>Author</th><th>Publisher</th><th>Edition</th></tr>' +
+          '<tr><td>'+ title + '</td><td>'+ author +'</td> <td>'+ publisher +'</td><td>'+ edition +'</td></tr>' +
+          '<tr><td>lele</td><td>lele</td> <td>1313</td><td>lel</td></tr>' +
+          '</table>')  
+      }
+
+    </script>
+  </body>
+</HTML>
