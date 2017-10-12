@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>	
+		<style>
+
+			body 
+			{
+				background-color:brown;
+				font-family: Courier New;
+			}
+			#mainHeader {color:yellow;}
+			input, select, textarea
+			{
+				color:white;
+				font-weight: bold;
+				background-color: brown;
+				font-size: 90%;
+			}
+			#form, select, textarea
+			{
+				color:white;
+				font-weight: bold;
+			}
+		</style>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<h1 a id= "mainHeader">SISTEMA DE BIBLIOTECA</h1>
+		
+		<form id="form" align = "right" action="/action_page.php">
+			Enter your information <br>
+			<br>
+			User: <br>
+			<input id="user" type="text" name="user" value="">
+			<br>
+			Password: <br>
+			<input id="pass" type="password" name="user" value="">
+			<br> 
+			<br>
+			<input id="submit" type="button" value="Submit">
+		  </form> 
+		  
+		<script>
+			$("#submit").click(function()
+			{
+				if($('#user').val() == '' || $('#pass').val()=='')
+				{
+					alert('Input can not be left blank');
+				}
+				else
+				{
+					alert("Usuario cargado.");
+					window.open("book_look.html","_self")
+				}
+			});
+
+		</script>
+	</body>
+</html>
