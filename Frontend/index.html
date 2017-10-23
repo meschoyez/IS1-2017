@@ -189,18 +189,20 @@
               <div class="box-header">
                 <h3 class="box-title">Data Table With Full Features</h3>
               </div>
-              <!-- /.box-header -->
+              <!-- /.box-header 
               <div class="box-body">
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                     <tr>
-                      <th>Titulo</th>
-                      <th>Autor</th>
-                      <th>ISBN</th>                      
+                      <th>Rendering engine</th>
+                      <th>Browser</th>
+                      <th>Platform(s)</th>
+                      <th>Engine version</th>
+                      <th>CSS grade</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr id='fila'>
+                    <tr>
                       <td>Cronicas de una muerte</td>
                       <td>Jose Marquez</td>
                       <td>123456789</td>
@@ -252,7 +254,106 @@
                   <tfoot>
                   </tfoot>
                 </table>
-              </div>
+              </div>-->
+              <div class="box-body">
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                      <th>Rendering engine</th>
+                      <th>Browser</th>
+                      <th>Platform(s)</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                    <!-- <tr>
+                      <th>Titulo</th>
+                      <th>Autor</th>
+                      <th>ISBN</th>                      
+                    </tr> -->
+                    </thead>
+                    <tbody>
+                      <!-- <tr onclick="add(this)">
+                        <td id="render">Trident</td>
+                        <td id="browser">Internet Explorer 4.0</td>
+                        <td id="platform">Win 95+</td>
+                        <td id="engine"> 4</td>
+                        <td id="css">X</td>
+                      </tr>
+                      <tr onclick="add(this)">
+                        <td id="render">Trident 2</td>
+                        <td id="browser">Internet Explorer 4.0 2</td>
+                        <td id="platform">Win 95+ 2</td>
+                        <td id="engine"> 4 2</td>
+                        <td id="css">X 2</td>
+                      </tr> -->
+                      <tr>
+                          <td>Cronicas de una muerte</td>
+                          <td>Jose Marquez</td>
+                          <td>123456789</td>
+                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>El metodo lean startup</td>
+                          <td>Eric Ries</td>
+                          <td>123456789</td>
+                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Zero to One</td>
+                          <td>Peter thiel</td>
+                          <td>123456789</td>
+                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Padre rico padre pobre</td>
+                          <td>Robert Kiroyaki</td>
+                          <td>123456789</td>
+                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Sprint</td>
+                          <td>Jake Knapp</td>
+                          <td>123456789</td>
+                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Brief History of Time</td>
+                          <td>Stephen Hawking</td>
+                          <td>123456789</td>
+                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Pensar Rapido Pensar Despacio</td>
+                          <td>No me acuerdo</td>
+                          <td>123456789</td>
+                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Algorithms</td>
+                          <td>Tomas H. Cormen</td>
+                          <td>123456789</td>
+                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                          <td></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                      <th>Rendering engine</th>
+                      <th>Browser</th>
+                      <th>Platform(s)</th>
+                      <th>Engine version</th>
+                      <th>CSS grade</th>
+                    </tr>
+                    </tfoot>
+                  </table>
+                </div>
               <!-- /.box-body -->
             </div>
             <!-- /.box -->
