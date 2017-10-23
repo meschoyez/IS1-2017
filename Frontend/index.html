@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,382 +29,362 @@
   <![endif]-->
 
   <!-- Google Font -->
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <script>
-  $(document).ready(function(){
-    $("#fila").click(function(){
-      $("#tabla").append('<tr><td>El metodo lean startup</td><td>Eric Ries</td><td>123456789</td><td> <input type="checkbox"> seleccionar </td></tr>')
-    });
-  });
+  function agregar(item) {
+    item.setAttribute("onclick", "eliminar(this)");
+    item.setAttribute("class", "btn btn-danger");
+    item.innerHTML = "Eliminar";
+    $("#tabla").append(item.parentElement.parentElement);
+  }
+
+  function eliminar(item) {
+    item.setAttribute("onclick", "agregar(this)");
+    item.setAttribute("class", "btn btn-success");
+    item.innerHTML = "Agregar";
+    $("#example1").append(item.parentElement.parentElement);
+  }
 </script>
 
 
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
+  <div class="wrapper">
 
-  <header class="main-header">
-    <!-- Logo -->
-    <a href="index.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Bibliotecario</b></span>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>A</b>LT</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>Bibliotecario</b></span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
 
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- Notifications: style can be found in dropdown.less -->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!-- Notifications: style can be found in dropdown.less -->
 
-          <!-- Tasks: style can be found in dropdown.less -->
+            <!-- Tasks: style can be found in dropdown.less -->
 
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header">
+                  <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
+                  <p>
+                    Alexander Pierce - Web Developer
+                    <small>Member since Nov. 2012</small>
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <li class="user-body">
+                  <div class="row">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Followers</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Sales</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Friends</a>
+                    </div>
                   </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
+                  <!-- /.row -->
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">Profile</a>
                   </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
                   </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+      </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+          <div class="pull-left image">
+            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          </div>
+          <div class="pull-left info">
+            <p>Alexander Pierce</p>
+            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          </div>
         </div>
-      </div>
-      <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>
               </span>
-        </div>
-      </form>
-      <!-- /.search form -->
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MENU</li>
-        <li class="treeview">
-          <a href="#">
+          </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+          <li class="header">MENU</li>
+          <li class="treeview">
+            <a href="#">
             <i class="fa fa-dashboard"></i> <span>Home</span>
           </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
+          </li>
+          <li class="treeview">
+            <a href="#">
             <i class="fa fa-files-o"></i>
             <span>Devoluciones</span>
           </a>
-        </li>
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
+          </li>
+        </ul>
+      </section>
+      <!-- /.sidebar -->
+    </aside>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Home
-        <small>Panel de control</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      </ol>
-    </section>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Home
+          <small>Panel de control</small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        </ol>
+      </section>
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Titulo</th>
-                  <th>Autor</th>
-                  <th>ISBN</th>
-                  <th>Seleccionar</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr id='fila'>
-                  <td>Cronicas de una muerte</td>
-                  <td>Jose Marquez</td>
-                  <td>123456789</td>
-                  <td> <input type="checkbox"> seleccionar </td>
-                </tr>
-                <tr>
-                  <td>El metodo lean startup</td>
-                  <td>Eric Ries</td>
-                  <td>123456789</td>
-                  <td> <input type="checkbox"> seleccionar </td>
-                </tr>
-                <tr>
-                  <td>Zero to One</td>
-                  <td>Peter thiel</td>
-                  <td>123456789</td>
-                  <td> <input type="checkbox"> seleccionar </td>
-                </tr>
-                <tr>
-                  <td>Padre rico padre pobre</td>
-                  <td>Robert Kiroyaki</td>
-                  <td>123456789</td>
-                  <td> <input type="checkbox"> seleccionar </td>
-                </tr>
-                <tr>
-                  <td>Sprint</td>
-                  <td>Jake Knapp</td>
-                  <td>123456789</td>
-                  <td> <input type="checkbox"> seleccionar </td>
-                </tr>
-                <tr>
-                  <td>Brief History of Time</td>
-                  <td>Stephen Hawking</td>
-                  <td>123456789</td>
-                  <td> <input type="checkbox"> seleccionar </td>
-                </tr>
-                <tr>
-                  <td>Pensar Rapido Pensar Despacio</td>
-                  <td>No me acuerdo</td>
-                  <td>123456789</td>
-                  <td> <input type="checkbox"> seleccionar </td>
-                </tr>
-                <tr>
-                  <td>Algorithms</td>
-                  <td>Tomas H. Cormen</td>
-                  <td>123456789</td>
-                  <td> <input type="checkbox"> seleccionar </td>
-                </tr>
-                </tbody>
-                <tfoot>
-                </tfoot>
-              </table>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <div class="row">
-        <div class="col-xs-8 col-sm-offset-2">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Libros solicitados</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body table-responsive no-padding">
-              <table id="tabla" class="table table-hover">
-                <tr>
-                  <th>ID</th>
-                  <th>User</th>
-                  <th>Date</th>
-                  <th>Status</th>
-                  <th>Reason</th>
-                </tr>
-                <tr>
-                  <td>183</td>
-                  <td>John Doe</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-success">Approved</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
-                <tr>
-                  <td>219</td>
-                  <td>Alexander Pierce</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-warning">Pending</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
-                <tr>
-                  <td>657</td>
-                  <td>Bob Doe</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-primary">Approved</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
-                <tr>
-                  <td>175</td>
-                  <td>Mike Doe</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-danger">Denied</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
-              </table>
-              <div class="col-xs-3 col-sm-offset-9">
-                <button type="button" class="btn btn-block btn-success btn-lg" data-toggle="modal" data-target="#myModal">Reservar</button>
+      <!-- Main content -->
+      <section class="content">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">Data Table With Full Features</h3>
               </div>
+              <!-- /.box-header -->
+              <div class="box-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Titulo</th>
+                      <th>Autor</th>
+                      <th>ISBN</th>                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id='fila'>
+                      <td>Cronicas de una muerte</td>
+                      <td>Jose Marquez</td>
+                      <td>123456789</td>
+                      <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                    </tr>
+                    <tr>
+                      <td>El metodo lean startup</td>
+                      <td>Eric Ries</td>
+                      <td>123456789</td>
+                      <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                    </tr>
+                    <tr>
+                      <td>Zero to One</td>
+                      <td>Peter thiel</td>
+                      <td>123456789</td>
+                      <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                    </tr>
+                    <tr>
+                      <td>Padre rico padre pobre</td>
+                      <td>Robert Kiroyaki</td>
+                      <td>123456789</td>
+                      <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                    </tr>
+                    <tr>
+                      <td>Sprint</td>
+                      <td>Jake Knapp</td>
+                      <td>123456789</td>
+                      <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                    </tr>
+                    <tr>
+                      <td>Brief History of Time</td>
+                      <td>Stephen Hawking</td>
+                      <td>123456789</td>
+                      <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                    </tr>
+                    <tr>
+                      <td>Pensar Rapido Pensar Despacio</td>
+                      <td>No me acuerdo</td>
+                      <td>123456789</td>
+                      <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                    </tr>
+                    <tr>
+                      <td>Algorithms</td>
+                      <td>Tomas H. Cormen</td>
+                      <td>123456789</td>
+                      <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.box-body -->
             </div>
-            <!-- /.box-body -->
+            <!-- /.box -->
           </div>
-          <!-- /.box -->
+          <!-- /.col -->
         </div>
-      </div>
-      <!-- /.row -->
-    </section>
-    <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+        <div class="row">
+          <div class="col-xs-8 col-sm-offset-2">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">Libros solicitados</h3>
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body table-responsive no-padding">
+                <table id="tabla" class="table table-hover">
+                  <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Autor</th>
+                        <th>ISBN</th>                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                  </tbody>
+                </table>
+                <div class="col-xs-3 col-sm-offset-9">
+                  <button type="button" class="btn btn-block btn-success btn-lg" data-toggle="modal" data-target="#myModal">Reservar</button>
+                </div>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+          </div>
+        </div>
+        <!-- /.row -->
+      </section>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
 
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Datos del socio</h4>
-        </div>
-        <form class="form-horizontal" method="POST" action="caja/control">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="hidden" name="id" value="{{ Auth::user()->id }}">
-            <input type="hidden" name="adminname" value="{{ Auth::user()->name }}">
-            <input type="hidden" name="administrador" value="{{ Auth::user()->email }}">
-            <div class="form-group">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Datos del socio</h4>
+            </div>
+            <form class="form-horizontal" method="POST" action="caja/control">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+              <input type="hidden" name="id" value="{{ Auth::user()->id }}">
+              <input type="hidden" name="adminname" value="{{ Auth::user()->name }}">
+              <input type="hidden" name="administrador" value="{{ Auth::user()->email }}">
+              <div class="form-group">
                 <label for="email" class="col-md-4 control-label">Legajo</label>
                 <div class="col-md-6">
-                    <input  type="ubicacion" class="form-control" name="ubicacion" required>
+                  <input type="ubicacion" class="form-control" name="ubicacion" required>
                 </div>
-            </div>
-            <div class="form-group">
+              </div>
+              <div class="form-group">
                 <label for="password" class="col-md-4 control-label">Nombre y apellido</label>
                 <div class="col-md-6">
-                    <input  type="ubicacion" class="form-control" name="ubicacion" required>
+                  <input type="ubicacion" class="form-control" name="ubicacion" required>
                 </div>
-            </div>
-            <div class="form-group">
+              </div>
+              <div class="form-group">
                 <label for="password" class="col-md-4 control-label">DNI</label>
                 <div class="col-md-6">
-                  <input  type="vencimiento" class="form-control" name="vencimiento" required placeholder="formato: dd/mm/YYYY">
+                  <input type="vencimiento" class="form-control" name="vencimiento" required placeholder="formato: dd/mm/YYYY">
                 </div>
-            </div>
-            <div class="form-group">
+              </div>
+              <div class="form-group">
                 <div class="col-md-6 col-md-offset-6">
-                    <button type="submit" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#myModalconfirm">
+                  <button type="submit" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#myModalconfirm">
                         Enviar
                     </button>
                 </div>
-            </div>
-        </form>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="myModalconfirm" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Confirmación del pedido</h4>
-      </div>
-      <form class="form-horizontal" method="POST" action="caja/control">
-          <div class="form-group">
-              <label for="email" class="col-md-4 control-label">Fecha de devolución</label>
-              <div class="col-md-6">
-                  <input  type="ubicacion" class="form-control" name="ubicacion" required>
               </div>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
           </div>
-      </form>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </div>
       </div>
-    </div>
-  </div>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 1.3
-    </div>
-    <strong><a href="#">Ingeniería de Software</a>.</strong> All rights
-    reserved.
-  </footer>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
+      <div class="modal fade" id="myModalconfirm" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Confirmación del pedido</h4>
+            </div>
+            <form class="form-horizontal" method="POST" action="caja/control">
+              <div class="form-group">
+                <label for="email" class="col-md-4 control-label">Fecha de devolución</label>
+                <div class="col-md-6">
+                  <input type="ubicacion" class="form-control" name="ubicacion" required>
+                </div>
+              </div>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.3
+      </div>
+      <strong><a href="#">Ingeniería de Software</a>.</strong> All rights reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Create the tabs -->
+      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <!-- Home tab content -->
+        <div class="tab-pane" id="control-sidebar-home-tab">
+          <h3 class="control-sidebar-heading">Recent Activity</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript:void(0)">
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
               <div class="menu-info">
@@ -412,9 +393,9 @@
                 <p>Will be 23 on April 24th</p>
               </div>
             </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
+            </li>
+            <li>
+              <a href="javascript:void(0)">
               <i class="menu-icon fa fa-user bg-yellow"></i>
 
               <div class="menu-info">
@@ -423,9 +404,9 @@
                 <p>New phone +1(800)555-1234</p>
               </div>
             </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
+            </li>
+            <li>
+              <a href="javascript:void(0)">
               <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 
               <div class="menu-info">
@@ -434,9 +415,9 @@
                 <p>nora@example.com</p>
               </div>
             </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
+            </li>
+            <li>
+              <a href="javascript:void(0)">
               <i class="menu-icon fa fa-file-code-o bg-green"></i>
 
               <div class="menu-info">
@@ -445,143 +426,143 @@
                 <p>Execution time 5 seconds</p>
               </div>
             </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
 
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="label label-danger pull-right">70%</span>
-              </h4>
+          <h3 class="control-sidebar-heading">Tasks Progress</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Custom Template Design
+                  <span class="label label-danger pull-right">70%</span>
+                </h4>
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Resume
-                <span class="label label-success pull-right">95%</span>
-              </h4>
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Update Resume
+                  <span class="label label-success pull-right">95%</span>
+                </h4>
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Laravel Integration
-                <span class="label label-warning pull-right">50%</span>
-              </h4>
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Laravel Integration
+                  <span class="label label-warning pull-right">50%</span>
+                </h4>
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Back End Framework
-                <span class="label label-primary pull-right">68%</span>
-              </h4>
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Back End Framework
+                  <span class="label label-primary pull-right">68%</span>
+                </h4>
 
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
 
-      </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
+        </div>
+        <!-- /.tab-pane -->
+        <!-- Stats tab content -->
+        <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+        <!-- /.tab-pane -->
+        <!-- Settings tab content -->
+        <div class="tab-pane" id="control-sidebar-settings-tab">
+          <form method="post">
+            <h3 class="control-sidebar-heading">General Settings</h3>
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
               Report panel usage
               <input type="checkbox" class="pull-right" checked>
             </label>
 
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-          <!-- /.form-group -->
+              <p>
+                Some information about this general settings option
+              </p>
+            </div>
+            <!-- /.form-group -->
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
               Allow mail redirect
               <input type="checkbox" class="pull-right" checked>
             </label>
 
-            <p>
-              Other sets of options are available
-            </p>
-          </div>
-          <!-- /.form-group -->
+              <p>
+                Other sets of options are available
+              </p>
+            </div>
+            <!-- /.form-group -->
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
               Expose author name in posts
               <input type="checkbox" class="pull-right" checked>
             </label>
 
-            <p>
-              Allow the user to show his name in blog posts
-            </p>
-          </div>
-          <!-- /.form-group -->
+              <p>
+                Allow the user to show his name in blog posts
+              </p>
+            </div>
+            <!-- /.form-group -->
 
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
+            <h3 class="control-sidebar-heading">Chat Settings</h3>
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
               Show me as online
               <input type="checkbox" class="pull-right" checked>
             </label>
-          </div>
-          <!-- /.form-group -->
+            </div>
+            <!-- /.form-group -->
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
               Turn off notifications
               <input type="checkbox" class="pull-right">
             </label>
-          </div>
-          <!-- /.form-group -->
+            </div>
+            <!-- /.form-group -->
 
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
               Delete chat history
               <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
             </label>
-          </div>
-          <!-- /.form-group -->
-        </form>
+            </div>
+            <!-- /.form-group -->
+          </form>
+        </div>
+        <!-- /.tab-pane -->
       </div>
-      <!-- /.tab-pane -->
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
+    <div class="control-sidebar-bg"></div>
   </div>
   <!-- ./wrapper -->
 
@@ -605,14 +586,15 @@
     $(function () {
       $('#example1').DataTable()
       $('#example2').DataTable({
-        'paging'      : true,
+        'paging': true,
         'lengthChange': false,
-        'searching'   : false,
-        'ordering'    : true,
-        'info'        : true,
-        'autoWidth'   : false
+        'searching': false,
+        'ordering': true,
+        'info': true,
+        'autoWidth': false
       })
     })
   </script>
 </body>
+
 </html>
