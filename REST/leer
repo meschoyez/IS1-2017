@@ -1,3 +1,5 @@
-1- la carpeta "restful" es un paquete de java
+1-  ignorar la carpeta "rest"
 
-2- agregar el jar de jboss de la carpeta rest al proyecto
+2- IS_REST es un projecto con el rest implementado
+
+3- recordar de agregar el jar de jboss de la carpeta rest al proyecto (o no va a funcionar)
