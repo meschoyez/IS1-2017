@@ -4,22 +4,22 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Biblioteca</title>
+  <title>Administrador</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -80,13 +80,13 @@
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
-                  <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                  <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
                     Alexander Pierce - Web Developer
@@ -130,7 +130,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
           <div class="pull-left image">
-            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
             <p>Alexander Pierce</p>
@@ -152,14 +152,20 @@
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MENU</li>
           <li>
-            <a href="index.html">
-            <i class="fa fa-dashboard"></i> <span>Home</span>
+            <a href="../administrador.html">
+            <i class="fa fa-dashboard"></i> <span>Nuevo socio</span>
           </a>
           </li>
           <li>
-            <a href="pages/devoluciones.html">
+            <a href="libro.html">
             <i class="fa fa-files-o"></i>
-            <span>Devoluciones</span>
+            <span>Nuevo Libro</span>
+          </a>
+          </li>
+          <li>
+            <a href="bibliotecario.html">
+            <i class="fa fa-files-o"></i>
+            <span>Nuevo Bibliotecario</span>
           </a>
           </li>
         </ul>
@@ -172,233 +178,159 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Home
-          <small>Panel de control</small>
+          Panel <small>Nuevo libro</small>
         </h1>
+
         <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+          <li><a href="#"><i class="fa fa-dashboard"></i>Socio</a></li>
         </ol>
       </section>
 
       <!-- Main content -->
       <section class="content">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="box">
-              <div class="box-header">
-                <h3 class="box-title">Data Table With Full Features</h3>
-              </div>
-              <div class="box-body">
-                  <table id="example1" class="table table-bordered table-striped">
-                    <thead>
-                    <tr>
-                      <th>Titulo</th>
-                      <th>Autor</th>
-                      <th>ISBN(s)</th>
-                      <th>Ubicación</th>
-                      <th></th>
-                    </tr>
-                    <!-- <tr>
-                      <th>Titulo</th>
-                      <th>Autor</th>
-                      <th>ISBN</th>
-                    </tr> -->
-                    </thead>
-                    <tbody>
-                      <!-- <tr onclick="add(this)">
-                        <td id="render">Trident</td>
-                        <td id="browser">Internet Explorer 4.0</td>
-                        <td id="platform">Win 95+</td>
-                        <td id="engine"> 4</td>
-                        <td id="css">X</td>
-                      </tr>
-                      <tr onclick="add(this)">
-                        <td id="render">Trident 2</td>
-                        <td id="browser">Internet Explorer 4.0 2</td>
-                        <td id="platform">Win 95+ 2</td>
-                        <td id="engine"> 4 2</td>
-                        <td id="css">X 2</td>
-                      </tr> -->
-                      <tr>
-                          <td>Cronicas de una muerte</td>
-                          <td>Jose Marquez</td>
-                          <td>123456789</td>
-                          <td></td>
-                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+        <div class="container">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form class="form-horizontal" method="POST" action="/inscripciones">
+                        <div class="form-group">
 
-                        </tr>
+                            <label for="password" class="col-md-3 control-label">Nombre</label>
+                            <div class="col-md-3">
+                                <input  type="telefono" class="form-control" name="dni" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label">Apellido</label>
+                            <div class="col-md-3">
+                                <input  type="telefono" class="form-control" name="precio" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label">Email</label>
+                            <div class="col-md-3">
+                              <input  type="administrador" class="form-control" name="horario" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label">Domicilio</label>
+                            <div class="col-md-3">
+                              <input  type="telefono" class="form-control" name="inicio"  required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label">Telefono</label>
+                            <div class="col-md-3">
+                                <input  type="obrasocial" class="form-control" name="total" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-6">
+                                <button type="submit" class="btn btn-primary">
+                                    Guardar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal-header">
+                      <h4 class="modal-title">Listados de inscripciones</h4>
+                    </div>
+                    <div class="col-md-10  col-md-offset-1 table-responsive">
+                       <table class="table table-hover table-striped" >
+                      <thead>
                         <tr>
-                          <td>El metodo lean startup</td>
-                          <td>Eric Ries</td>
-                          <td>123456789</td>
-                          <td></td>
-                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
+                          <th>Nombre y apellido</th>
+                          <th>Nombre y apellido</th>
+                          <th>Email</th>
+                          <th>Domicilio</th>
+                          <th>Telefono</th>
+                          <th>Editar</th>
+                          <th>Eliminar</th>
+                       </tr>
+                      </thead>
+                      <tfoot>
+                        <tr>
+                          <th>Nombre y apellido</th>
+                          <th>Nombre y apellido</th>
+                          <th>Email</th>
+                          <th>Domicilio</th>
+                          <th>Telefono</th>
+                          <th>Editar</th>
+                          <th>Eliminar</th>
+                       </tr>
+                      </tfoot>
+                      <tbody>
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td align="center" id="{{ $inscripcion->idInscripcion }}" onclick="seleccionar(this);"><button type="submit" class="btn btn-info"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
+                            <td>
+                              <form action="{{route('inscripciones.destroy', $inscripcion->idInscripcion)}}" method="post">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                <button type="submit" class="btn btn-danger"> <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                              </form>
+                             </td>
+                             <td hidden="true"></td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-md-12">
+                    <form class="form-horizontal" method="POST" action="/inscripciones">
+                        <div class="form-group">
 
-                        </tr>
-                        <tr>
-                          <td>Zero to One</td>
-                          <td>Peter thiel</td>
-                          <td>123456789</td>
-                          <td></td>
-                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
-
-                        </tr>
-                        <tr>
-                          <td>Padre rico padre pobre</td>
-                          <td>Robert Kiroyaki</td>
-                          <td>123456789</td>
-                          <td></td>
-                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
-
-                        </tr>
-                        <tr>
-                          <td>Sprint</td>
-                          <td>Jake Knapp</td>
-                          <td>123456789</td>
-                          <td></td>
-                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
-                        </tr>
-                        <tr>
-                          <td>Brief History of Time</td>
-                          <td>Stephen Hawking</td>
-                          <td>123456789</td>
-                          <td></td>
-                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
-                        </tr>
-                        <tr>
-                          <td>Pensar Rapido Pensar Despacio</td>
-                          <td>No me acuerdo</td>
-                          <td>123456789</td>
-                          <td></td>
-                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
-                        </tr>
-                        <tr>
-                          <td>Algorithms</td>
-                          <td>Tomas H. Cormen</td>
-                          <td>123456789</td>
-                          <td></td>
-                          <td><button type="button" class="btn btn-success" onclick="agregar(this)">Agregar</button></td>
-
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                    <tr>
-                      <th>Titulo</th>
-                      <th>Autor</th>
-                      <th>ISBN(s)</th>
-                      <th>Ubicación</th>
-                      <th></th>
-                    </tr>
-                    </tfoot>
-                  </table>
-                </div>
-              <!-- /.box-body -->
-            </div>
-            <!-- /.box -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <div class="row">
-          <div class="col-xs-8 col-sm-offset-2">
-            <div class="box">
-              <div class="box-header">
-                <h3 class="box-title">Libros solicitados</h3>
-              </div>
-              <!-- /.box-header -->
-              <div class="box-body table-responsive no-padding">
-                <table id="tabla" class="table table-hover">
-                  <thead>
-                    <tr>
-                        <th>Titulo</th>
-                        <th>Autor</th>
-                        <th>ISBN</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-
-                  </tbody>
-                </table>
-                <div class="col-xs-3 col-sm-offset-9">
-                  <button type="button" class="btn btn-block btn-success btn-lg" data-toggle="modal" data-target="#myModal">Reservar</button>
+                            <label for="password" class="col-md-3 control-label">Nombre</label>
+                            <div class="col-md-3">
+                                <input  type="telefono" class="form-control" name="dni" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label">Apellido</label>
+                            <div class="col-md-3">
+                                <input  type="telefono" class="form-control" name="precio" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label">Email</label>
+                            <div class="col-md-3">
+                              <input  type="administrador" class="form-control" name="horario" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label">Domicilio</label>
+                            <div class="col-md-3">
+                              <input  type="telefono" class="form-control" name="inicio"  required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label">Telefono</label>
+                            <div class="col-md-3">
+                                <input  type="obrasocial" class="form-control" name="total" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-6">
+                                <button type="submit" class="btn btn-primary">
+                                    Guardar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
                 </div>
               </div>
-              <!-- /.box-body -->
-            </div>
-            <!-- /.box -->
-          </div>
-        </div>
+    </div>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
         <!-- /.row -->
       </section>
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Datos del socio</h4>
-            </div>
-            <form class="form-horizontal" method="POST" action="caja/control">
-              <input type="hidden" name="_token" value="{{ csrf_token() }}">
-              <input type="hidden" name="id" value="{{ Auth::user()->id }}">
-              <input type="hidden" name="adminname" value="{{ Auth::user()->name }}">
-              <input type="hidden" name="administrador" value="{{ Auth::user()->email }}">
-              <div class="form-group">
-                <label for="email" class="col-md-4 control-label">Legajo</label>
-                <div class="col-md-6">
-                  <input type="ubicacion" class="form-control" name="ubicacion" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="password" class="col-md-4 control-label">Nombre y apellido</label>
-                <div class="col-md-6">
-                  <input type="ubicacion" class="form-control" name="ubicacion" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="password" class="col-md-4 control-label">DNI</label>
-                <div class="col-md-6">
-                  <input type="vencimiento" class="form-control" name="vencimiento" required placeholder="formato: dd/mm/YYYY">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-6 col-md-offset-6">
-                  <button type="submit" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#myModalconfirm">
-                        Enviar
-                    </button>
-                </div>
-              </div>
-            </form>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="myModalconfirm" role="dialog">
-        <div class="modal-dialog">
-
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Confirmación del pedido</h4>
-            </div>
-            <form class="form-horizontal" method="POST" action="caja/control">
-              <div class="form-group">
-                <label for="email" class="col-md-4 control-label">Fecha de devolución</label>
-                <div class="col-md-6">
-                  <input type="ubicacion" class="form-control" name="ubicacion" required>
-                </div>
-              </div>
-            </form>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
@@ -606,34 +538,18 @@
   <!-- ./wrapper -->
 
   <!-- jQuery 3 -->
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
   <!-- Bootstrap 3.3.7 -->
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- DataTables -->
-  <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- SlimScroll -->
-  <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
   <!-- FastClick -->
-  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="../bower_components/fastclick/lib/fastclick.js"></script>
   <!-- AdminLTE App -->
-  <script src="dist/js/adminlte.min.js"></script>
+  <script src="../dist/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
-  <script src="dist/js/demo.js"></script>
+  <script src="../dist/js/demo.js"></script>
   <!-- page script -->
-  <script>
-    $(function () {
-      $('#example1').DataTable()
-      $('#example2').DataTable({
-        'paging': true,
-        'lengthChange': false,
-        'searching': false,
-        'ordering': true,
-        'info': true,
-        'autoWidth': false
-      })
-    })
-  </script>
 </body>
 
 </html>
